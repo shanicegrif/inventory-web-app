@@ -11,7 +11,29 @@
         <h1>International Coffee Blends</h1>
     </header>
     <div>
+        
         <form>
+            <legend>Add New Coffee</legend>
+            <hr>
+            <label for="Name">Company/Brand of Coffee</label>
+            <br>
+            <input type="text" name="Name" required id="Name">
+            <br>
+            <label for="Origin">Origin of Coffee</label>
+            <br>
+            <label for="Price">Price</label>
+            <br>
+            <select name="Coffee strength" id="Coffee Strength">
+                <option value="Light to Medium Roast">Light to Medium Roast</option>
+                <option value="Medium Roast">Medium Roast</option>
+                <option value="Medium to Dark Roast">Medium to Dark Roast</option>
+                <option value="Dark Roast">Dark Roast</option>
+            </select>
+            <br>
+            <select id="Stock" name="Stock">
+                <option value="In Stock">In Stock</option>
+                <option value="Out of Stock">Out of Stock</option>
+            </select>
         </form>
     </div>
 </body>
