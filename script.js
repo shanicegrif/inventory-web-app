@@ -15,7 +15,7 @@ form.addEventListener("submit", (event) => {
     console.log(stock)
 })
 
-function coffeeTempl(name, origin, price, strength, stock) {
+function coffeeTemp(name, origin, price, strength, stock) {
     const li = document.createElement("li");
     li.textContent += name;
 
