@@ -19,7 +19,7 @@ form.addEventListener("submit", (event) => {
 })
 
 
-function coffeeTemp(name, origin, price, strength, stock) {
+function coffeeTemp(name, origin, price, strength) {
     const li = document.createElement("li");
     li.textContent += name;
 
@@ -40,11 +40,25 @@ function coffeeTemp(name, origin, price, strength, stock) {
         strong.textContent = "Coffe Strength: ";
         li.append(document.createElement("br"), strong, strength);
     }
-    if (stock) {
-        const strong = document.createElement("strong");
-        strong.textContent = "Stock: ";
-        li.append(document.createElement("br"), strong, stock);
-    }
+
+    return li;
+}
+ 
+
+function createCoffeeInfo(name, origin, price, strength, stock) {
+    const li = coffeeTemp(name, origin, price, strength, stock);
+
+    const stockButton = document.createElement("button");
+    stockButton.classList.add("stock-button");
+    stockButton.textContent = stock === "in-stock" ? "In Stock" : "Out of Stock";
+    stockButton.classList.toggle("out-of-stock", stock === "out-of-stock");
+    li.append(document.createElement("br"), stockButton);
+
+    stockButton.addEventListener("click", () => {
+    stock = stock === "in-stock" ? "out-of-stock" : "in-stock";
+    stockButton.textContent = stock === "in-stock" ? "In Stock" : "Out of Stock";
+    stockButton.classList.toggle("out-of-stock", stock === "out-of-stock");
+  });
 
     const deleteButton = document.createElement("button");
     deleteButton.innerText = "Delete Coffee";
@@ -54,12 +68,6 @@ function coffeeTemp(name, origin, price, strength, stock) {
     deleteButton.addEventListener("click", () => {
         li.remove();
     })
-
-    return li;
-}
-
-function createCoffeeInfo(name, origin, price, strength, stock) {
-    const li = coffeeTemp(name, origin, price, strength, stock);
 
     const ul = document.querySelector("ul");
     ul.append(li);
