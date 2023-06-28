@@ -13,6 +13,9 @@ form.addEventListener("submit", (event) => {
     console.log(price);
     console.log(strength);
     console.log(stock)
+
+    createCoffeeInfo(name, origin, price, strength, stock);
+    form.reset();
 })
 
 function coffeeTemp(name, origin, price, strength, stock) {
@@ -52,4 +55,11 @@ function coffeeTemp(name, origin, price, strength, stock) {
     })
 
     return li;
+}
+
+function createCoffeeInfo(name, origin, price, strength, stock) {
+    const li = coffeeTemp(name, origin, price, strength, stock);
+
+    const ul = document.querySelector("ul");
+    ul.append(li);
 }
