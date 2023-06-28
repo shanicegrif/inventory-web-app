@@ -18,6 +18,7 @@ form.addEventListener("submit", (event) => {
     form.reset();
 })
 
+
 function coffeeTemp(name, origin, price, strength, stock) {
     const li = document.createElement("li");
     li.textContent += name;
@@ -30,7 +31,7 @@ function coffeeTemp(name, origin, price, strength, stock) {
     
     if (price) {
         const strong = document.createElement("strong");
-        strong.textContent = "Price: ";
+        strong.textContent = "Price: $";
         li.append(document.createElement("br"), strong, price);
     }
     
@@ -48,7 +49,7 @@ function coffeeTemp(name, origin, price, strength, stock) {
     const deleteButton = document.createElement("button");
     deleteButton.innerText = "Delete Coffee";
     console.log(deleteButton);
-    li.append(deleteButton);
+    li.append(document.createElement("br"), deleteButton);
 
     deleteButton.addEventListener("click", () => {
         li.remove();
