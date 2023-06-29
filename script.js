@@ -18,7 +18,7 @@ form.addEventListener("submit", (event) => {
   form.reset();
 });
 
-function coffeeTemp(name, origin, price, strength) {
+function coffeeTemp(name, origin, price, strength, stock) {
   const li = document.createElement("li");
   li.textContent += name;
 
