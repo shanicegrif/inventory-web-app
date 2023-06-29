@@ -8,6 +8,11 @@ form.addEventListener("submit", (event) => {
   let strength = event.target.strength.value;
   let stock = event.target.stock.value;
 
+  if (!isValidPrice(price)) {
+    alert("Please enter a valid price (numeric value).");
+    return;
+  }
+
   console.log(name);
   console.log(origin);
   console.log(price);
@@ -18,6 +23,15 @@ form.addEventListener("submit", (event) => {
   form.reset();
 });
 
+const resetButton = document.querySelector("button[type= 'reset']");
+resetButton.addEventListener("click", () => {
+  form.reset();
+});
+
+function isValidPrice(price) {
+  return !isNaN(parseFloat(price)) && isFinite(price);
+}
+
 function coffeeTemp(name, origin, price, strength, stock) {
   const li = document.createElement("li");
   li.textContent += name;
@@ -26,6 +40,10 @@ function coffeeTemp(name, origin, price, strength, stock) {
     const italic = document.createElement("em");
     italic.textContent = "Origin: ";
     li.append(document.createElement("br"), italic, origin);
+  } else {
+    const italic = document.createElement("em");
+    italic.textContent = "Origin: ";
+    li.append(document.createElement("br"), italic, "Unknown");
   }
 
   if (price) {
