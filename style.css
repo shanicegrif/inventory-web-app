@@ -1,3 +1,27 @@
+
+html, 
+body {
+    background-color: rgb(239, 236, 243);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    background-color: lightslategrey;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 0px;
+}
+
 .stock-button {
     padding: 5px;
     cursor: pointer;
