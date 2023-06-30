@@ -66,7 +66,6 @@ function coffeeTemp(name, origin, price, strength, stock) {
 
   stockButton.addEventListener("dblclick", () => {
     stock = stock === "in-stock" ? "out-of-stock" : "in-stock";
-    stockButton.textContent =
       stock === "in-stock" ? "In Stock" : "Out of Stock";
     stockButton.classList.toggle("out-of-stock", stock === "out-of-stock");
   });
