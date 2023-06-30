@@ -6,7 +6,7 @@ This is a international coffee web application that keeps track of coffee invent
 
 ### *Form Instructions:*
 - It is required for the user to enter the coffee brand name and the price
-- The origin is not required however, if its left empty then it will provide a default value of *Unknown*. (Stretch Goal)
+- The origin is not required and can be left empty
 - The price is also a required field that only take in a numerical value. The user will be notified when an incorrect value is inputted through an alert box.
 ```js
 alert("Please enter a valid price (numeric value).")
@@ -26,3 +26,7 @@ alert("Please enter a valid price (numeric value).")
 - To delete an existing inventory item, the user must double click the "Delete Coffee" button.
 
 *Note: The double click is to ensure information is not changed by accidental single clicks.*
+
+### Stretch Goals:
+
+- If origin is not given by the user then it will be given a default value of *Unknown*.
