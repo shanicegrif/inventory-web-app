@@ -85,7 +85,9 @@ function coffeeTemp(name, origin, price, strength, stock) {
 
 function createCoffeeInfo(name, origin, price, strength, stock) {
   const li = coffeeTemp(name, origin, price, strength, stock);
+  const lineBreak = document.createElement("br");
 
   const ul = document.querySelector("ul");
-  ul.append(li); // use prepend to have the last form created to show at the top of the unordered list
+  ul.prepend(lineBreak);
+  ul.prepend(li);
 }
