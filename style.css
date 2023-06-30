@@ -9,9 +9,14 @@ body {
 
 header {
     text-align: center;
+    font-size: larger;
     background-color: lightslategrey;
-    width: 100%;
+    width: 10px auto;
     padding-top: 10px;
+}
+
+img {
+    width: 100%;
 }
 
 .container {
@@ -19,7 +24,6 @@ header {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 50px;
-    grid-row-gap: 0px;
 }
 
 .stock-button {
@@ -34,4 +38,14 @@ header {
 
 ul {
     list-style: none;
+}
+
+footer {
+    text-align: center;
+    position: fixed;
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-color: lightslategray;
 }
