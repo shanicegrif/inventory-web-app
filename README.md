@@ -6,7 +6,7 @@ This is a international coffee web application that keeps track of coffee invent
 
 ### *Form Instructions:*
 - It is required for the user to enter the coffee brand name and the price
-- The origin is not required however, if its left empty then it will provide a default value of *Unknown*.
+- The origin is not required however, if its left empty then it will provide a default value of *Unknown*. (Stretch Goal)
 - The price is also a required field that only take in a numerical value. The user will be notified when an incorrect value is inputted through an alert box.
 ```js
 alert("Please enter a valid price (numeric value).")
