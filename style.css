@@ -23,22 +23,17 @@ img {
     height: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
     grid-column-gap: 20px;
     padding-right: 5px;
     padding-left: 5px;
-}
-
-.middle-img{
-    background-image: url(./images/coffee_beans.jpg);
 }
 
 .new-coffee {
     font-size: 25px;
 }
 
-input{
-    width: 50%;
+input[type="text"] {
+    font-size: 20px;
 }
 
 select{
@@ -48,6 +43,10 @@ select{
 
 button{
     font-size: 20px;
+}
+
+.middle-img{
+    background-image: url(./images/coffee_beans.jpg);
 }
 
 .stock-button {
@@ -74,6 +73,14 @@ footer {
     background-color: lightslategray;
 }
 
-@media (max-width:8) {
-    
+@media (max-width: 992px) {
+    .container{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px 0px;
+    }
+
+    select{
+        width: 30%;
+        font-size: 20px;
+    }
 }
