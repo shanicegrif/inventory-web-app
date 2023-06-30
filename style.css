@@ -2,6 +2,7 @@
 html, 
 body {
     background-color: rgb(239, 236, 243);
+    height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -20,10 +21,17 @@ img {
 }
 
 .container {
+    height: 63.5%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
-    grid-column-gap: 50px;
+    grid-column-gap: 20px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.middle-img{
+    background-image: url(./images/coffee_beans.jpg);
 }
 
 .stock-button {
