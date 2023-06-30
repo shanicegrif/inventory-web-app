@@ -2,6 +2,7 @@
 
 This is a international coffee web application that keeps track of coffee inventory. It takes take in new inventory through the use of the form with information inputted by the user. Every new form that is created is moved to the top of the inventory list. The stock status of any existing inventory can be changed and the user can delete an item from the inventory list.
 
+---
 ## Guide:
 
 ### *Form Instructions:*
@@ -29,4 +30,4 @@ alert("Please enter a valid price (numeric value).")
 
 ### Stretch Goals:
 
-- If origin is not given by the user then it will be given a default value of *Unknown*.
+- If origin is not given by the user then it will be given a default value of *Unknown* after a new coffee item is created.
