@@ -48,8 +48,12 @@ button{
     background-image: url(./images/coffee_beans.jpg);
 }
 
+.list li{
+    font-size: 23px
+}
+
 .stock-button {
-    padding: 5px;
+    padding: 2px;
     cursor: pointer;
 }
   

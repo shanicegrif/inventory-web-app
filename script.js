@@ -54,7 +54,7 @@ function coffeeTemp(name, origin, price, strength, stock) {
 
   if (strength) {
     const strong = document.createElement("strong");
-    strong.textContent = "Coffe Strength: ";
+    strong.textContent = "Coffee Strength: ";
     li.append(document.createElement("br"), strong, strength);
   }
 
