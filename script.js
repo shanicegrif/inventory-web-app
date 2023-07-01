@@ -1,4 +1,6 @@
 const form = document.querySelector("form");
+let errorMessage = document.createElement("p");
+errorMessage.style.color = "red"
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -83,10 +85,21 @@ function coffeeTemp(name, origin, price, strength, stock) {
 }
 
 function createCoffeeInfo(name, origin, price, strength, stock) {
+  const coffeeList = document.querySelectorAll(".list li");
+
+  for (const coffeeItem of coffeeList) {
+    const coffeeName = coffeeItem.firstChild.textContent.trim().toLowerCase();
+
+    if (coffeeName === name.toLowerCase()) {
+      alert("A coffee with the same name already exists. Please enter a different name.");
+      return;
+    }
+  }
+
   const li = coffeeTemp(name, origin, price, strength, stock);
   const lineBreak = document.createElement("br");
 
-  const ul = document.querySelector("ul");
+  const ul = document.querySelector(".list");
   ul.prepend(lineBreak);
   ul.prepend(li);
 }
