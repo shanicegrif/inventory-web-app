@@ -64,7 +64,7 @@ function coffeeTemp(name, origin, price, strength, stock) {
   stockButton.classList.toggle("out-of-stock", stock === "out-of-stock");
   li.append(document.createElement("br"), stockButton);
 
-  stockButton.addEventListener("dblclick", () => {
+  stockButton.addEventListener("click", () => {
     stock = stock === "in-stock" ? "out-of-stock" : "in-stock";
     stockButton.textContent = stock === "in-stock" ? "In Stock" : "Out of Stock";
     stockButton.classList.toggle("out-of-stock", stock === "out-of-stock");
@@ -75,7 +75,7 @@ function coffeeTemp(name, origin, price, strength, stock) {
   console.log(deleteButton);
   li.append(document.createElement("br"), deleteButton);
 
-  deleteButton.addEventListener("dblclick", () => {
+  deleteButton.addEventListener("click", () => {
     li.remove();
   });
 

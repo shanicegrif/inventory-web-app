@@ -22,11 +22,9 @@ alert("Please enter a valid price (numeric value).")
 
 ### *List Features:*
 
-- To update the stock status of an existing inventory item, the user must double click the stock button of that item.
+- To update the stock status of an existing inventory item, the user must click the stock button of that item to make it in or out of stock.
 
-- To delete an existing inventory item, the user must double click the "Delete Coffee" button.
-
-*Note: The double click is to ensure information is not changed by accidental single clicks.*
+- To delete an existing inventory item, the user must click the "Delete Coffee" button.
 
 ### Stretch Goals:
 
