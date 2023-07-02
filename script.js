@@ -10,6 +10,17 @@ form.addEventListener("submit", (event) => {
   let strength = event.target.strength.value;
   let stock = event.target.stock.value;
 
+  const coffeeList = document.querySelectorAll(".list li");
+
+  for (const coffeeItem of coffeeList) {
+    const coffeeName = coffeeItem.firstChild.textContent.trim().toLowerCase();
+
+    if (coffeeName === name.toLowerCase()) {
+      alert("A coffee with the same name already exists. Please enter a different name.");
+      return;
+    }
+  }
+
   if (!isValidPrice(price)) {
     alert("Please enter a valid price (numeric value).");
     return;
@@ -85,17 +96,6 @@ function coffeeTemp(name, origin, price, strength, stock) {
 }
 
 function createCoffeeInfo(name, origin, price, strength, stock) {
-  const coffeeList = document.querySelectorAll(".list li");
-
-  for (const coffeeItem of coffeeList) {
-    const coffeeName = coffeeItem.firstChild.textContent.trim().toLowerCase();
-
-    if (coffeeName === name.toLowerCase()) {
-      alert("A coffee with the same name already exists. Please enter a different name.");
-      return;
-    }
-  }
-
   const li = coffeeTemp(name, origin, price, strength, stock);
   const lineBreak = document.createElement("br");
 
