@@ -6,7 +6,10 @@ This is a international coffee web application that keeps track of coffee invent
 ## Guide:
 
 ### *Form Instructions:*
-- It is required for the user to enter the coffee brand name and the price
+- It is required for the user to enter the coffee brand name and the price. The user will be notified when they try to input an existing brand name.
+```js
+alert("A coffee brand with the same name already exists. Please enter a different name.")
+```
 - The origin is not required and can be left empty
 - The price is also a required field that only take in a numerical value. The user will be notified when an incorrect value is inputted through an alert box.
 ```js

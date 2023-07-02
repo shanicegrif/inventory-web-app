@@ -16,7 +16,7 @@ form.addEventListener("submit", (event) => {
     const coffeeName = coffeeItem.firstChild.textContent.trim().toLowerCase();
 
     if (coffeeName === name.toLowerCase()) {
-      alert("A coffee with the same name already exists. Please enter a different name.");
+      alert("A coffee brand with the same name already exists. Please enter a different name.");
       return;
     }
   }
