@@ -46,11 +46,19 @@ button {
 }
 
 .middle-img {
-  background-image: url(./images/coffee_beans.jpg);
+  background-image: url(./images/the-studio-coffee-roasters-specialty-coffee-683x1024.jpg);
+}
+
+ul {
+  list-style: none;
+}
+
+.list {
+  padding-bottom: 25px;
+  font-size: 20px;
 }
 
 .stock-button {
-  padding: 2px;
   cursor: pointer;
 }
 
@@ -59,22 +67,16 @@ button {
   color: white;
 }
 
-ul {
-  list-style: none;
-}
-
-.list li {
-    font-size: 20px;
-}
-
 footer {
+  color: aliceblue;
+  font-size: 20px;
   text-align: center;
   position: fixed;
-  padding: 10px 10px 0px 10px;
+  padding: 25px 10px 10px 10px;
   bottom: 0;
   width: 100%;
   height: 25px;
-  background-color: lightslategray;
+  background-image: url(./images/coffee_beans.jpg);
 }
 
 @media (max-width: 992px) {
@@ -84,6 +86,7 @@ footer {
   }
 
   .middle-img{
+    background-image: url(./images/coffee_beans.jpg);
     height: 90px;
   }
 
