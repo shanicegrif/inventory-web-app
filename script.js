@@ -36,6 +36,36 @@ form.addEventListener("submit", (event) => {
   form.reset();
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const coffeeData = [
+    {
+      name: "Blue Bottle",
+      origin: "Unknown",
+      price: "12.99",
+      strength: "Medium Roast",
+      stock: "out-of-stock",
+    },
+    {
+      name: "Peet's",
+      origin: "Ethiopia",
+      price: "10.99",
+      strength: "Dark Roast",
+      stock: "in-stock",
+    },
+    {
+      name: "Folgers",
+      origin: "Columbia",
+      price: "11.69",
+      strength: "Medium Roast",
+      stock: "in-stock",
+    },
+  ];
+
+  coffeeData.forEach((coffee) => {
+    createCoffeeInfo(coffee.name, coffee.origin, coffee.price, coffee.strength, coffee.stock)
+  })
+})
+
 const resetButton = document.querySelector("button[type= 'reset']");
 resetButton.addEventListener("click", () => {
   form.reset();
