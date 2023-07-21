@@ -52,6 +52,7 @@ button {
 
 .middle-img {
   background-image: url(./images/the-studio-coffee-roasters-specialty-coffee-683x1024.jpg);
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 
@@ -92,6 +93,7 @@ footer {
 
   .middle-img{
     background-image: url(./images/coffee_beans.jpg);
+    background-size: cover;
     height: 90px;
   }
 
